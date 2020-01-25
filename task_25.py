@@ -2,9 +2,29 @@
 
 from pyrob.api import *
 
+def draw_plus():
+    fill_cell()
+    move_down()
+    move_right()
+    fill_cell()
+    move_up()
+    fill_cell()
+    move_up()
+    fill_cell()
+    move_right()
+    move_down()
+    fill_cell()
+    pass
 
 @task
 def task_2_2():
+    move_down(2)
+    for i in range(5):
+        draw_plus()
+        if not wall_is_on_the_right():
+            move_right(2)
+    move_up()
+    move_left(2)
     pass
 
 

@@ -3,7 +3,7 @@
 from pyrob.api import *
 
 
-@task(delay=0.505)
+@task(delay=0.00005)
 def task_8_18():
     a=0
     ax=0
@@ -20,13 +20,14 @@ def task_8_18():
                 fill_cell()
             else:
                 a=a+1
+                print(a)
             move_down()
         if not wall_is_on_the_right() and not wall_is_above():
             move_right()
         if wall_is_on_the_right():
             return
         print(a)
-        mov(ax, a)
+        mov('ax', a)
     pass
 
 

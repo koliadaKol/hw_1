@@ -21,6 +21,20 @@ def task_8_10():
             fill_cell()
             move_down()
         move_right()
+    if not wall_is_beneath()and  wall_is_above():
+            move_down()
+            fill_cell()
+            move_up()
+    if wall_is_beneath()and not wall_is_above():
+        move_up()
+        fill_cell()
+        move_down()
+    if not wall_is_beneath() and not wall_is_above():
+        move_down()
+        fill_cell()
+        move_up(2)
+        fill_cell()
+        move_down()
     
     pass
 
